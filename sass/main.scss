@@ -1,0 +1,90 @@
+$darkMagenta: hsl(300, 43%, 22%);
+$softPink: hsl(333, 80%, 67%);
+$darkGrayishMagenta: hsl(303, 10%, 53%);
+$lightGrayishMagenta: hsl(300, 24%, 96%);
+$white: hsl(0, 0%, 100%);
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: auto;
+    max-width: 375px;
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px;
+    padding: 0 1.7em;
+    // border: 2px solid black;
+    .align {
+        text-align: center;
+    }
+    .header {
+        .main-title {
+            color: $darkMagenta;
+            font-size: 2em;
+            font-weight: bold;
+            margin: 2.5em 1em 1em 1em;
+        }
+    }
+    .content {
+        margin-bottom: 2.5em;
+        .content-paragraph {
+            margin: 3px;
+            font-size: 16px;
+            font-weight: 500;
+            color: $darkGrayishMagenta;
+            line-height: 25px;
+        }
+    }
+    .rating-section {
+        background-color: $lightGrayishMagenta;
+        margin-bottom: 1em;
+        padding: 1em;
+        border-radius: 10px;
+        p {
+            margin-top: 0.7em;
+            color: $darkMagenta;
+            font-weight: 700;
+        }
+    }
+    .buyer-review {
+        background-color: $darkMagenta;
+        padding: 2.5em 2.1em;
+        margin-bottom: 1em;
+        border-radius: 10px;
+        .name-buyer {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.7em;
+            img {
+                border-radius: 50%;
+                width: 42px;
+                margin-right: 25px;
+            }
+            .text-container {
+                .white-text {
+                    color: $white;
+                }
+                .pink-text {
+                    color: $softPink;
+                    opacity: 0.5;
+                    font-weight: 300;
+                }
+            }
+        }
+        .main-content-white {
+            color: $white;
+            opacity: 0.8;
+            line-height: 25px;
+        }
+    }
+    .first {
+        margin-top: 3.5em;
+    }
+    .attribution {
+        font-size: 1em;
+        margin: 1.5em 0;
+    }
+}

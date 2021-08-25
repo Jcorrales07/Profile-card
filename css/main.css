@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: auto;
+  max-width: 375px;
+  font-family: "Spartan", sans-serif;
+  font-size: 15px;
+  padding: 0 1.7em;
+}
+body .align {
+  text-align: center;
+}
+body .header .main-title {
+  color: #502050;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 2.5em 1em 1em 1em;
+}
+body .content {
+  margin-bottom: 2.5em;
+}
+body .content .content-paragraph {
+  margin: 3px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #937b92;
+  line-height: 25px;
+}
+body .rating-section {
+  background-color: #f7f2f7;
+  margin-bottom: 1em;
+  padding: 1em;
+  border-radius: 10px;
+}
+body .rating-section p {
+  margin-top: 0.7em;
+  color: #502050;
+  font-weight: 700;
+}
+body .buyer-review {
+  background-color: #502050;
+  padding: 2.5em 2.1em;
+  margin-bottom: 1em;
+  border-radius: 10px;
+}
+body .buyer-review .name-buyer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.7em;
+}
+body .buyer-review .name-buyer img {
+  border-radius: 50%;
+  width: 42px;
+  margin-right: 25px;
+}
+body .buyer-review .name-buyer .text-container .white-text {
+  color: white;
+}
+body .buyer-review .name-buyer .text-container .pink-text {
+  color: #ee68a4;
+  opacity: 0.5;
+  font-weight: 300;
+}
+body .buyer-review .main-content-white {
+  color: white;
+  opacity: 0.8;
+  line-height: 25px;
+}
+body .first {
+  margin-top: 3.5em;
+}
+body .attribution {
+  font-size: 1em;
+  margin: 1.5em 0;
+}
+
+/*# sourceMappingURL=main.css.map */
