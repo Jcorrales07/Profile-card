@@ -11,43 +11,74 @@ $white: hsl(0, 0%, 100%);
 }
 
 body {
-    margin: auto;
-    max-width: 375px;
+    margin: 1.7em 3em;
+    max-width: 1440px;
     font-family: 'Spartan', sans-serif;
     font-size: 15px;
-    padding: 0 1.7em;
+    // padding: 0 1.7em;
     // border: 2px solid black;
-    .align {
-        text-align: center;
-    }
+    .main-container {
+        display: flex;
+        justify-content: space-between;
+        .main-header {
+            width: 50%;
+        }
+    }  
     .header {
+        width: 64%;
         .main-title {
             color: $darkMagenta;
-            font-size: 2em;
+            font-size: 3.5em;
+            text-align: left;
             font-weight: bold;
-            margin: 2.5em 1em 1em 1em;
+            margin-top: 2.5em;
+            margin-bottom: 0.2em;
         }
     }
     .content {
         margin-bottom: 2.5em;
+        width: 72%;
         .content-paragraph {
-            margin: 3px;
             font-size: 16px;
             font-weight: 500;
             color: $darkGrayishMagenta;
             line-height: 25px;
         }
     }
+    .grid-container {
+        display: grid;
+        grid-template-columns: 5em 5em 5em 5em 5em 5em 5em 5em;
+        grid-template-rows: 5em 5em 5em;
+        margin-top:10.5em;
+    }
     .rating-section {
+        display: flex;
+        align-items: center;
         background-color: $lightGrayishMagenta;
         margin-bottom: 1em;
-        padding: 1em;
+        padding: 1em 1.5em;
         border-radius: 10px;
         p {
-            margin-top: 0.7em;
+            margin-left: 0.7em;
             color: $darkMagenta;
             font-weight: 700;
         }
+    }
+    .colunm1 {
+        grid-column: 1 / 6;
+    }
+    .colunm2 {
+        grid-column: 2 / 8;
+    }
+    .colunm3 {
+        grid-column: 3 / 9;
+    }
+    .section-buyer-review {
+        margin-top: 2.5em;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 25.61em 2em 25.61em 2em 25.61em;
+        grid-template-rows: 2em 2em 2em 2em 2em 2em 2em 2em 2em 2em 2em;
     }
     .buyer-review {
         background-color: $darkMagenta;
@@ -81,10 +112,120 @@ body {
         }
     }
     .first {
-        margin-top: 3.5em;
+        grid-row: 1 / 10;
     }
+    .second {
+        grid-column: 3 / 4;
+        grid-row: 2 / 11;
+    }
+    .third {
+        grid-column: 5 / 5;
+        grid-row: 3 / 12;
+    }
+    // .first {
+    //     margin-top: 3.5em;
+    // }
     .attribution {
         font-size: 1em;
         margin: 1.5em 0;
+    }
+}
+
+@media screen and (max-width: 376px){
+    body {
+        margin: auto;
+        font-family: 'Spartan', sans-serif;
+        font-size: 15px;
+        padding: 0 1.7em;
+        .align {
+            text-align: center;
+        }
+        .main-container {
+            display: inline;
+            .main-header {
+                width: 100%;
+            }
+        }
+        .header {
+            width: 100%;
+            .main-title {
+                text-align: center;
+                color: $darkMagenta;
+                font-size: 2em;
+                font-weight: bold;
+                margin: 2.5em 1em 1em 1em;
+            }
+        }
+        .content {
+            width: 100%;
+            margin-bottom: 2.5em;
+            .content-paragraph {
+                margin: 3px;
+                font-size: 16px;
+                font-weight: 500;
+                color: $darkGrayishMagenta;
+                line-height: 25px;
+            }
+        }
+        .grid-container {
+            display: inline;
+        }
+        .rating-section {
+            display: flex;
+            flex-direction: column;
+            background-color: $lightGrayishMagenta;
+            margin-bottom: 1em;
+            padding: 1em;
+            border-radius: 10px;
+            p {
+                margin-left: 0;
+                margin-top: 0.7em;
+                color: $darkMagenta;
+                font-weight: 700;
+            }
+        }
+        .section-buyer-review {
+            display: inline;
+        }
+        .buyer-review {
+            background-color: $darkMagenta;
+            padding: 2.5em 2.1em;
+            margin-bottom: 1em;
+            border-radius: 10px;
+            .name-buyer {
+                display: flex;
+                align-items: center;
+                margin-bottom: 1.7em;
+                img {
+                    border-radius: 50%;
+                    width: 42px;
+                    margin-right: 25px;
+                }
+                .text-container {
+                    .white-text {
+                        color: $white;
+                    }
+                    .pink-text {
+                        margin-top: 0.3em;
+                        color: $softPink;
+                        opacity: 0.5;
+                        font-weight: 300;
+                    }
+                }
+            }
+            .main-content-white {
+                color: $white;
+                opacity: 0.8;
+                line-height: 25px;
+                font-size: 12.5px;
+            }
+        }
+        .first {
+            margin-top: 3.5em;
+        }
+        .attribution {
+            font-size: 1em;
+            margin: 1.5em 0;
+        }
     }
 }
